@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite both this repository and the upstream VT-Refine paper."
+type: software
+title: "VT-Refine-Lang-Fine-Manipulation: Natural-language-driven fine-grained robotic insertion via the VT-Refine pipeline"
+authors:
+  - family-names: "<TODO>"
+    given-names: "<Member 1>"
+    affiliation: "<your-university>"
+  - family-names: "<TODO>"
+    given-names: "<Member 2>"
+    affiliation: "<your-university>"
+  - family-names: "<TODO>"
+    given-names: "<Member 3>"
+    affiliation: "<your-university>"
+url: "https://github.com/<TODO_user>/vt-refine-lang-fine-manipulation"
+abstract: >-
+  Class project extending the VT-Refine bimanual assembly pipeline with
+  (a) a 4-tier symbolic+semantic router that maps free-form natural-language
+  instructions to one of three discrete insertion-depth targets, and
+  (b) a Phase-4 v3 stop agent based on a z-only progress formula that holds
+  the diffusion policy at the requested depth. Targets the 00581 nut-and-bolt
+  asset on the ALOHA bimanual platform.
+keywords:
+  - "robotics"
+  - "natural language interface"
+  - "bimanual assembly"
+  - "diffusion policy"
+  - "stop agent"
+references:
+  - type: conference-paper
+    title: "VT-Refine: Learning Bimanual Assembly with Visuo-Tactile Feedback via Simulation Fine-Tuning"
+    authors:
+      - family-names: "Huang"
+        given-names: "Binghao"
+      - family-names: "Xu"
+        given-names: "Jie"
+      - family-names: "Akinola"
+        given-names: "Iretiayo"
+      - family-names: "Yang"
+        given-names: "Wei"
+      - family-names: "Sundaralingam"
+        given-names: "Balakumar"
+      - family-names: "O'Flaherty"
+        given-names: "Rowland"
+      - family-names: "Fox"
+        given-names: "Dieter"
+      - family-names: "Wang"
+        given-names: "Xiaolong"
+      - family-names: "Mousavian"
+        given-names: "Arsalan"
+      - family-names: "Chao"
+        given-names: "Yu-Wei"
+      - family-names: "Li"
+        given-names: "Yunzhu"
+    conference:
+      name: "Conference on Robot Learning (CoRL)"
+    year: 2025
+    url: "https://github.com/NVlabs/vt-refine"

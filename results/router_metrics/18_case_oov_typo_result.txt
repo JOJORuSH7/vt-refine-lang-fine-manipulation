@@ -1,0 +1,9 @@
+test_fallback_unparsed_mode (tests.test_router_typos.TestRouterOOVTypos)
+OOV inputs must take mode 'fallback_unparsed'. ... ok
+test_numeric_p_star (tests.test_router_typos.TestRouterOOVTypos)
+16 cases must match expected p_star within tol=0.001. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.013s
+
+OK

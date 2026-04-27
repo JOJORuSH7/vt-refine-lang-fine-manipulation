@@ -1,0 +1,246 @@
+{
+  "asset_id": "00581",
+  "plug_urdf": "/root/vt-refine/easysim-envs/src/easysim_envs/assets/automate_scaled/urdf/00581_plug.urdf",
+  "socket_urdf": "/root/vt-refine/easysim-envs/src/easysim_envs/assets/automate_scaled/urdf/00581_socket.urdf",
+  "plug_records": [
+    {
+      "filename": "../mesh/00581/asset_plug.obj",
+      "found": "/root/vt-refine/easysim-envs/src/easysim_envs/assets/automate_scaled/mesh/00581/asset_plug.obj",
+      "scale": [
+        2.6,
+        2.6,
+        3.0
+      ],
+      "n": 2880,
+      "raw_xyz_min": [
+        -0.011116,
+        -0.009687,
+        0.005178
+      ],
+      "raw_xyz_max": [
+        0.011116,
+        0.00964,
+        0.012963
+      ],
+      "scaled_xyz_min": [
+        -0.0289016,
+        -0.0251862,
+        0.015534000000000001
+      ],
+      "scaled_xyz_max": [
+        0.0289016,
+        0.025064,
+        0.038889
+      ]
+    }
+  ],
+  "socket_records": [
+    {
+      "filename": "../mesh/00581/asset_socket.obj",
+      "found": "/root/vt-refine/easysim-envs/src/easysim_envs/assets/automate_scaled/mesh/00581/asset_socket.obj",
+      "scale": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "n": 2786,
+      "raw_xyz_min": [
+        -0.009103,
+        -0.007883,
+        0.0
+      ],
+      "raw_xyz_max": [
+        0.009103,
+        0.007883,
+        0.031532
+      ],
+      "scaled_xyz_min": [
+        -0.0227575,
+        -0.0197075,
+        0.0
+      ],
+      "scaled_xyz_max": [
+        0.0227575,
+        0.0197075,
+        0.07883
+      ]
+    }
+  ],
+  "plug_n_vertices_unique": 2880,
+  "socket_n_vertices_unique": 2786,
+  "plug_scaled_extents_xyz": [
+    0.0578032,
+    0.050250199999999995,
+    0.023355
+  ],
+  "socket_scaled_extents_xyz": [
+    0.045515,
+    0.039415,
+    0.07883
+  ],
+  "argmax_extent_axis_plug": 0,
+  "argmax_extent_axis_socket": 2,
+  "plug": {
+    "ok": true,
+    "axis_scores": [
+      {
+        "axis_idx": 0,
+        "extent": 0.0578032,
+        "n_inner": 864,
+        "r_thresh_q30": 0.012233038961612019,
+        "inner_r_mean": 0.00987006462888087,
+        "inner_r_std": 0.0023497433593712277,
+        "rel_std": 0.23806767713512492,
+        "inner_axial_extent": 0.0578032,
+        "score": 0.20065840282693725,
+        "perp_center": [
+          0.000156,
+          0.027066
+        ]
+      },
+      {
+        "axis_idx": 1,
+        "extent": 0.050250199999999995,
+        "n_inner": 867,
+        "r_thresh_q30": 0.012869240725077762,
+        "inner_r_mean": 0.010163633164976952,
+        "inner_r_std": 0.0024547040042717915,
+        "rel_std": 0.24151835907758856,
+        "inner_axial_extent": 0.050219,
+        "score": 0.17226702345231729,
+        "perp_center": [
+          0.0,
+          0.027066
+        ]
+      },
+      {
+        "axis_idx": 2,
+        "extent": 0.023355,
+        "n_inner": 865,
+        "r_thresh_q30": 0.014935259097852973,
+        "inner_r_mean": 0.014747305270250786,
+        "inner_r_std": 0.00011809645337307945,
+        "rel_std": 0.008008002222027046,
+        "inner_axial_extent": 0.019572,
+        "score": 0.33740172476700175,
+        "perp_center": [
+          0.0,
+          0.000156
+        ]
+      }
+    ],
+    "body_axis_idx": 2,
+    "body_axis_local_tip_to_base": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "perp_center_local": [
+      0.0,
+      0.000156
+    ],
+    "shaft_radius_threshold_m": 0.014965401723623865,
+    "shaft_axial_min_local": 0.016739999999999998,
+    "shaft_axial_max_local": 0.036312,
+    "shaft_length_m": 0.019572,
+    "shaft_n_vertices": 902,
+    "shaft_total_vertices": 2880,
+    "shaft_tip_local": [
+      0.0,
+      0.000156,
+      0.036312
+    ],
+    "shaft_base_local": [
+      0.0,
+      0.000156,
+      0.016739999999999998
+    ],
+    "tip_at_low_axial": false,
+    "r_at_low_end": 0.014837876982526437,
+    "r_at_high_end": 0.014740121550063772
+  },
+  "socket": {
+    "ok": true,
+    "axis_scores": [
+      {
+        "axis_idx": 0,
+        "extent": 0.045515,
+        "n_inner": 837,
+        "r_thresh_q30": 0.008114573694902278,
+        "inner_r_mean": 0.00497642019698542,
+        "inner_r_std": 0.0025399287226428387,
+        "rel_std": 0.5103927365662285,
+        "inner_axial_extent": 0.045515,
+        "score": 0.08121982500860078,
+        "perp_center": [
+          0.0,
+          0.00657
+        ]
+      },
+      {
+        "axis_idx": 1,
+        "extent": 0.039415,
+        "n_inner": 839,
+        "r_thresh_q30": 0.008954870881257864,
+        "inner_r_mean": 0.005190157656985929,
+        "inner_r_std": 0.0027906415679814878,
+        "rel_std": 0.5376795373884831,
+        "inner_axial_extent": 0.039415,
+        "score": 0.06706886575488313,
+        "perp_center": [
+          0.0,
+          0.00657
+        ]
+      },
+      {
+        "axis_idx": 2,
+        "extent": 0.07883,
+        "n_inner": 842,
+        "r_thresh_q30": 0.012898613297560325,
+        "inner_r_mean": 0.010643331175391676,
+        "inner_r_std": 0.0032725840335085443,
+        "rel_std": 0.3074774222073488,
+        "inner_axial_extent": 0.07883,
+        "score": 0.2205174232074326,
+        "perp_center": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "bore_axis_idx": 2,
+    "bore_axis_local_aperture_to_back": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "perp_center_local": [
+      0.0,
+      0.0
+    ],
+    "bore_radius_threshold_m": 0.01401591520890022,
+    "bore_axial_min_local": 0.0,
+    "bore_axial_max_local": 0.07883,
+    "bore_length_m": 0.07883,
+    "bore_n_vertices": 1108,
+    "bore_total_vertices": 2786,
+    "n_outer_near_low_axial": 1078,
+    "n_outer_near_high_axial": 0,
+    "aperture_rim_local": [
+      0.0,
+      0.0,
+      0.07883
+    ],
+    "bore_back_local": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "aperture_at_low_axial": false
+  },
+  "phase1_acceptance": {
+    "plug_shaft_identified": true,
+    "socket_bore_identified": true,
+    "aperture_unambiguous": true
+  }
+}

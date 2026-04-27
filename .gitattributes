@@ -1,0 +1,19 @@
+# Force LF line endings on shell scripts so they run inside Linux container
+# even when checked out / edited from a Windows host.
+*.sh text eol=lf
+*.py text eol=lf
+
+# Treat the following as binary (avoid line-ending munging / diff)
+*.mp4 binary
+*.gif binary
+*.png binary
+*.jpg binary
+*.pdf binary
+*.pt binary
+*.pth binary
+*.ckpt binary
+
+# Mark our final deliverables explicitly (helps GitHub Linguist suppress them)
+results/demos/* linguist-vendored
+results/gifs/* linguist-vendored
+results/frames/* linguist-vendored

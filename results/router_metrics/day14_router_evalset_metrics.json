@@ -1,0 +1,59 @@
+{
+  "seed": 42,
+  "backend": "semantic_offline",
+  "evalset_path": "router_evalset.jsonl",
+  "total": 372,
+  "correct": 372,
+  "accuracy": 1.0,
+  "mae_all": 0.0,
+  "mae_valid_exact_or_semantic": 0.0,
+  "fallback_total": 54,
+  "fallback_correct": 54,
+  "fallback_accuracy": 1.0,
+  "mode_breakdown": {
+    "exact": 158,
+    "semantic_offline": 160,
+    "fallback_ambiguous": 24,
+    "fallback_unparsed": 30
+  },
+  "category_metrics": {
+    "ambiguous": {
+      "n": 24,
+      "correct": 24,
+      "accuracy": 1.0
+    },
+    "exact_decimal": {
+      "n": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "exact_fraction": {
+      "n": 40,
+      "correct": 40,
+      "accuracy": 1.0
+    },
+    "exact_percent": {
+      "n": 60,
+      "correct": 60,
+      "accuracy": 1.0
+    },
+    "exact_phrase": {
+      "n": 18,
+      "correct": 18,
+      "accuracy": 1.0
+    },
+    "semantic_offline": {
+      "n": 160,
+      "correct": 160,
+      "accuracy": 1.0
+    },
+    "unparsed": {
+      "n": 30,
+      "correct": 30,
+      "accuracy": 1.0
+    }
+  },
+  "num_failures": 0,
+  "failures_first_25": [],
+  "leakage_policy": "String-level normalized disjointness enforced against tests/test_router.py string literals."
+}

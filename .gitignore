@@ -1,0 +1,72 @@
+# === Model checkpoints / weights / large binaries ===
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.hdf5
+*.tar
+*.zip
+
+# === Pretrain / demonstration data (multi-GB) ===
+data/00*/
+data/*.tar
+data/*.zip
+data/*.h5
+data/*.hdf5
+
+# === Logs / runs / checkpoints ===
+log/
+logs/
+outputs/
+checkpoints/
+wandb/
+.wandb/
+runs/
+*.log
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# === Editor / OS ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# === Secrets / credentials ===
+.env
+.env.*
+secrets/
+credentials/
+*.pem
+*.key
+
+# === Container / build cache ===
+.docker/cache/
+
+# === Big media: ignore by default but allow our final deliverables under results/ ===
+*.mp4
+*.gif
+*.webm
+*.mov
+!results/demos/*.mp4
+!results/gifs/*.gif
+
+# === ffmpeg / temp scratch ===
+*.tmp
+tmp/
+scratch/
