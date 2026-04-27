@@ -5,18 +5,18 @@
 > and the policy holds it there.
 
 Built on top of [VT-Refine (NVlabs, CoRL 2025)](https://github.com/NVlabs/vt-refine)
-for the 00581 nut-and-bolt asset on the ALOHA bimanual platform. Class project
-deliverable; see `CONTRIBUTORS.md`.
-
-If you use this work please cite both **this repository** and the **VT-Refine
-paper**. Citation entries are in `CITATION.cff`.
+for the 00581 nut-and-bolt asset on the ALOHA bimanual platform.
 
 ---
 
 ## Pipeline at a glance
-```
-free-form English  ->  4-tier router  ->  target progress p*  ->  Phase 4 v3 stop agent  ->  rim holds at depth
-("halfway", "litlle bitt", ...)        in {0.25, 0.50, 0.75}           (z-only progress formula)
+
+```mermaid
+flowchart LR
+    A["Free-form English"] --> B["4-tier router"]
+    B --> C["target progress p*<br/>{0.25, 0.50, 0.75}"]
+    C --> D["Phase 4 v3 stop agent<br/>(z-only progress)"]
+    D --> E["rim holds at depth"]
 ```
 
 Two contributions on top of upstream VT-Refine:
@@ -33,20 +33,11 @@ Two contributions on top of upstream VT-Refine:
    gated by a lateral admit and a lift gate, that triggers a hold the first
    time `progress_z >= target_progress`. No dependence on quaternion or
    mesh rotation. See `docs/stop_agent_physics.md` for derivation.
-
-Why these two and not more: the upstream pipeline already handles the hard
-parts (visuo-tactile diffusion policy + RL fine-tuning). What was missing
-for a usable demo is a robust mapping from human language to a depth target
-and a clean way to stop the policy mid-trajectory. Those are the two pieces
-this repo adds.
-
 ---
 
 ## Demo highlights
 
-Five end-to-end demos. Each animation below is the original mp4 sped up 6x
-with a 2-second tail freeze on the final frame. Full-speed mp4s and the
-end-frame stills are under `results/`.
+Five end-to-end demos. Each animation below is the original mp4 sped up 6x.
 
 ### Three different inputs, all routed to the same 25 % goal
 
@@ -152,8 +143,7 @@ derivation is in `docs/stop_agent_physics.md`.
 ## Reproducing the demos
 
 This repo contains only our additions; the upstream simulator, ML stack,
-and base policy are external dependencies. We do **not** ship checkpoints
-or pretrain data.
+and base policy are external dependencies.
 
 1. Follow upstream [VT-Refine](https://github.com/NVlabs/vt-refine) install
    (Docker-based; pulls the simulator, diffusion policy, and AutoMate
@@ -169,19 +159,13 @@ ROUTER_SEMANTIC_BACKEND=auto bash scripts/run_with_text_command.sh "halfway"
    The driver routes the input text, calls the Phase 4 stop agent at the
    resulting target depth, and writes an mp4 under
    `log/aperture_rim_demo_videos/`.
-
-A "class-project complete" reproducer is **not** the goal of this repo --
-the goal is to make the source readable to a reviewer and to give the
-demo speaker every artifact they need under `results/`.
-
 ---
 
 ## Methodology and design write-ups
 
 In-depth documents live under `docs/`:
 
-- `docs/methodology.md` -- the methodology summary used as the written
-  companion to the in-class Methodology presentation
+- `docs/methodology.md` -- the methodology summary
 - `docs/system_architecture.md` -- how the router and stop agent compose
   end-to-end, with the dataflow and decision boundaries
 - `docs/router_design.md` -- the 4-tier waterfall, priority rationale,
@@ -189,10 +173,9 @@ In-depth documents live under `docs/`:
 - `docs/stop_agent_physics.md` -- z-only progress derivation, geometry
   constants for 00581, and the plug / socket naming convention
 - `docs/known_pitfalls.md` -- a short list of non-obvious bugs we caught
-  during development (kept short on purpose)
+  during development
 - `docs/upstream_changes.md` -- exactly which files we added or modified
-  relative to upstream VT-Refine, satisfying the NVIDIA Source Code
-  License modification-notice requirement
+  relative to upstream VT-Refine
 
 ---
 
@@ -206,6 +189,4 @@ repository.
 
 ## Acknowledgements
 
-We thank the VT-Refine authors for releasing their pipeline, the AutoMate
-data and asset providers (00581 in particular), and our course staff for
-the project framing.
+We thank the VT-Refine authors for releasing their pipeline and our course staff for the project framing.
