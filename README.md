@@ -15,7 +15,7 @@ for the 00581 nut-and-bolt asset on the ALOHA bimanual platform.
 flowchart LR
     A["Free-form English"] --> B["4-tier router"]
     B --> C["target progress p*<br/>{0.25, 0.50, 0.75}"]
-    C --> D["Phase 4 v3 stop agent<br/>(z-only progress)"]
+    C --> D["Phase 4 stop agent<br/>(z-only progress)"]
     D --> E["rim holds at depth"]
 ```
 
@@ -33,6 +33,7 @@ Two contributions on top of upstream VT-Refine:
    gated by a lateral admit and a lift gate, that triggers a hold the first
    time `progress_z >= target_progress`. No dependence on quaternion or
    mesh rotation. See `docs/stop_agent_physics.md` for derivation.
+
 ---
 
 ## Demo highlights
@@ -89,7 +90,7 @@ in `results/demos/`.
 - `tests/` -- unit tests (`test_router.py`) and the OOV/typo regression
   (`test_router_typos.py`)
 - `dppo_extensions/` -- four files that drop into the upstream `vt-refine/dppo/`
-  tree at the same relative paths. Includes the Phase 4 v3 stop agent and
+  tree at the same relative paths. Includes the Phase 4 stop agent and
   the calibration logger / mesh inspector / progress analyzer used to
   derive the geometry constants
 - `scripts/` -- driver shell scripts:
@@ -159,6 +160,7 @@ ROUTER_SEMANTIC_BACKEND=auto bash scripts/run_with_text_command.sh "halfway"
    The driver routes the input text, calls the Phase 4 stop agent at the
    resulting target depth, and writes an mp4 under
    `log/aperture_rim_demo_videos/`.
+
 ---
 
 ## Methodology and design write-ups
