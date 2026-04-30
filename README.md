@@ -45,17 +45,17 @@ Five end-to-end demos. Each animation below is the original mp4 sped up 6x.
 <table>
 <tr>
 <td align="center" width="33%">
-  <img src="results/gifs/insert_25__p025__seed41_6x.gif" width="100%"><br>
+  <img src="results/gifs/insert_25__p025__seed200_6x.gif" width="100%"><br>
   <sub><b>"insert 25%"</b></sub><br>
   <sub><code>exact</code> -&gt; p* = 0.25</sub>
 </td>
 <td align="center" width="33%">
-  <img src="results/gifs/insert_a_little_bit__p025__seed41_6x.gif" width="100%"><br>
+  <img src="results/gifs/insert_a_little_bit__p025__seed200_6x.gif" width="100%"><br>
   <sub><b>"insert a little bit"</b></sub><br>
   <sub><code>semantic_offline</code> -&gt; p* = 0.25</sub>
 </td>
 <td align="center" width="33%">
-  <img src="results/gifs/insert_a_litlle_bitt__p025__seed41_6x.gif" width="100%"><br>
+  <img src="results/gifs/insert_a_litlle_bitt__p025__seed200_6x.gif" width="100%"><br>
   <sub><b>"insert a litlle bitt"</b> <i>(double typo)</i></sub><br>
   <sub>typo -&gt; fuzzy -&gt; <code>semantic_offline</code> -&gt; p* = 0.25</sub>
 </td>
@@ -67,12 +67,12 @@ Five end-to-end demos. Each animation below is the original mp4 sped up 6x.
 <table>
 <tr>
 <td align="center" width="50%">
-  <img src="results/gifs/halfway__p050__seed41_6x.gif" width="100%"><br>
+  <img src="results/gifs/halfway__p050__seed200_6x.gif" width="100%"><br>
   <sub><b>"halfway"</b></sub><br>
   <sub><code>exact</code> -&gt; p* = 0.50</sub>
 </td>
 <td align="center" width="50%">
-  <img src="results/gifs/most_of_the_way__p075__seed41_6x.gif" width="100%"><br>
+  <img src="results/gifs/most_of_the_way__p075__seed200_6x.gif" width="100%"><br>
   <sub><b>"most of the way"</b></sub><br>
   <sub><code>semantic_offline</code> -&gt; p* = 0.75</sub>
 </td>
@@ -125,13 +125,13 @@ in `results/demos/`.
 
 ### Stop agent
 
-First-crossing steps on the calibration trajectory (seed = 41):
+First-crossing steps on the calibration trajectory (seed = 200, ckpt `state_840.pt`):
 
 | Target depth | First-crossing step | Visual outcome |
 |--------------|---------------------|----------------|
-| 0.25 (shallow) | step **150** | rim sits on top, ~25 % engaged |
-| 0.50 (mid)     | step **179** | rim mid-shaft, ~50 % engaged |
-| 0.75 (deep)    | step **186** | rim near bottom, ~75 % engaged |
+| 0.25 (shallow) | step **161** | rim sits on top, ~25 % engaged |
+| 0.50 (mid)     | step **201** | rim mid-shaft, ~50 % engaged |
+| 0.75 (deep)    | step **207** | rim near bottom, ~75 % engaged |
 
 Detailed analysis and gate parameters are in
 `results/stop_agent_metrics/first_crossing_steps.md` and the physics
@@ -153,9 +153,7 @@ and base policy are external dependencies.
    This drops the four `dppo_extensions/` files into the matching
    `dppo/agent/eval/` and `dppo/scripts/` paths.
 3. From inside the upstream container, run the end-to-end driver:
-```
 ROUTER_SEMANTIC_BACKEND=auto bash scripts/run_with_text_command.sh "halfway"
-```
 
    The driver routes the input text, calls the Phase 4 stop agent at the
    resulting target depth, and writes an mp4 under

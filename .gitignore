@@ -70,3 +70,6 @@ credentials/
 *.tmp
 tmp/
 scratch/
+
+# VS Code workspace
+*.code-workspace
